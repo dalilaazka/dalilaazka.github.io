@@ -159,3 +159,105 @@ h2 em { color: #7897a8; font-family: var(--serif); font-weight: 400; letter-spac
   .footer span:nth-child(2) { display: none; }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 17px; }
 }
+
+
+/* -------------------------------------------------------
+   Refinement pass: tighter rhythm, stronger typography,
+   and more visual density while keeping the minimal style.
+   ------------------------------------------------------- */
+.container { width: min(1180px, calc(100% - 64px)); }
+.site-header { height: 70px; }
+.nav-links { font-size: 13px; gap: 38px; }
+.nav-cta { font-size: 12px; padding: 11px 16px; }
+
+.hero {
+  min-height: 590px;
+  gap: 42px;
+  padding-top: 48px;
+  padding-bottom: 78px;
+}
+.hero-copy { padding: 0 0 20px; }
+.eyebrow, .section-kicker { font-size: 11px; }
+h1 { font-size: clamp(54px, 6.1vw, 82px); margin: 23px 0 20px; }
+.hero-role { font-size: 15px; }
+.hero-intro { font-size: 16px; line-height: 1.78; max-width: 490px; margin: 23px 0 27px; }
+.button { font-size: 12px; padding: 15px 19px; }
+.text-link { font-size: 12px; }
+.hero-visual { height: 420px; box-shadow: 13px 15px 0 #e6ebea; }
+.visual-label { font-size: 10px; }
+.visual-label span { font-size: 9px; }
+.coordinate { font-size: 11px; }
+.coordinate span { font-size: 9px; }
+.hero-bottom { bottom: 19px; font-size: 9px; }
+
+.section { padding: 84px 0; }
+.two-column { gap: 76px; }
+h2 { font-size: clamp(38px, 4.2vw, 54px); }
+.about-copy { padding-top: 20px; }
+.about-copy p { font-size: 14px; line-height: 1.85; }
+.about-copy .lead { font-size: 18px; }
+.about-facts { margin-top: 28px; padding-top: 18px; }
+.about-facts strong { font-size: 21px; }
+.about-facts span { font-size: 11px; }
+
+.section-heading { margin-bottom: 34px; }
+.section-note { max-width: 390px; font-size: 13px; line-height: 1.75; }
+.project-grid { gap: 18px; }
+.project-art { height: 235px; }
+.project-featured .project-art { height: 250px; }
+.art-tag { font-size: 9px; }
+.art-caption { font-size: 19px; }
+.project-info { padding: 21px 24px 25px; }
+.project-meta { font-size: 8px; }
+.project-info h3, .project-next h3 { font-size: 21px; }
+.project-info p, .project-next p:not(.section-kicker) { font-size: 13px; line-height: 1.75; }
+.project-status { font-size: 10px; }
+.project-next { min-height: 235px; padding: 28px; }
+.disclaimer { font-size: 10px; }
+
+.skills-section .section-heading { margin-bottom: 35px; }
+.skill-group { padding-top: 25px; padding-bottom: 27px; }
+.skill-number { font-size: 11px; }
+.skill-group h3 { font-size: 17px; margin: 16px 0 10px; }
+.skill-group p { font-size: 13px; line-height: 1.8; }
+.skill-note { font-size: 10px; }
+
+.contact-section { padding-top: 82px; }
+.contact-inner { gap: 65px; padding-bottom: 70px; }
+.contact-copy { padding-top: 30px; }
+.contact-copy p { font-size: 14px; line-height: 1.8; }
+.contact-link { font-size: 15px; padding: 15px 0; }
+.social-link, .social-placeholder { font-size: 12px; }
+.footer { font-size: 9px; }
+
+@media (max-width: 800px) {
+  .container { width: min(100% - 40px, 680px); }
+  .hero { gap: 27px; padding-top: 48px; padding-bottom: 72px; }
+  .hero-visual { height: 340px; }
+  .section { padding: 70px 0; }
+  .two-column { gap: 22px; }
+  .about-copy { padding-top: 0; }
+  .section-heading { gap: 14px; }
+  .contact-inner { gap: 22px; padding-bottom: 58px; }
+  .contact-copy { padding-top: 0; }
+}
+@media (max-width: 560px) {
+  .container { width: calc(100% - 36px); }
+  .nav-links { gap: 12px; font-size: 11px; }
+  .hero { padding-top: 42px; }
+  h1 { font-size: clamp(48px, 13vw, 64px); }
+  .hero-role { font-size: 13px; }
+  .hero-intro { font-size: 15px; }
+  .hero-visual { height: 285px; }
+  .section { padding: 62px 0; }
+  h2 { font-size: 38px; }
+  .about-copy p { font-size: 13px; }
+  .about-copy .lead { font-size: 16px; }
+  .project-info h3, .project-next h3 { font-size: 20px; }
+  .project-info p, .project-next p:not(.section-kicker) { font-size: 12px; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .skill-group, .skill-group:not(:first-child) { padding: 20px 0; }
+  .skill-group h3 { font-size: 16px; }
+  .skill-group p { font-size: 12px; }
+  .contact-section { padding-top: 65px; }
+}
